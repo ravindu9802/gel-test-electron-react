@@ -13,6 +13,7 @@ import {
 } from 'antd';
 import type { FormInstance } from 'antd/es/form';
 import LaneContentsData from 'models/LaneContents';
+import './LaneContents.css';
 
 const EditableContext = React.createContext<FormInstance<any> | null>(null);
 
@@ -193,7 +194,7 @@ const LaneContents: React.FC = () => {
   });
 
   return (
-    <div style={{ width: '800px' }}>
+    <div>
       <Title level={3} style={{ textAlign: 'center' }}>
         Lane Contents
       </Title>
@@ -201,7 +202,7 @@ const LaneContents: React.FC = () => {
         name="basic"
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 16 }}
-        style={{ maxWidth: 600 }}
+        style={{ maxWidth: 600, margin: 'auto' }}
         initialValues={{ remember: true }}
         autoComplete="off"
       >
